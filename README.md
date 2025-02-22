@@ -1,4 +1,8 @@
 Audi-VI-Sync V0.3
+
+
+![Screenshot from 2025-02-22 08-59-11](https://github.com/user-attachments/assets/d762cd2b-8e3f-48d0-9382-47edec254aff)
+
 Audi-VI-Sync V0.3 is a Streamlit-based tool that synchronizes video effects with audio features. It processes uploaded audio and video files, extracting key sound properties like RMS and onset strength using Librosa. These features then dynamically control video effects such as zoom, rotation, blur, brightness, contrast, and even a cartoon filter.
 The tool supports GPU acceleration via TensorFlow for optimized performance. It converts uploaded audio to WAV format for analysis and allows users to apply customizable visual effects. The video processing function loops footage if necessary and adjusts effects in real-time based on audio characteristics.
 Additionally, Audi-VI-Sync can blend multiple videos by mixing frames at user-defined ratios, ensuring smooth transitions. The final processed video is rendered in high resolution (1920x1080) with synchronized audio and can be exported in MP4 format using FFmpeg.
