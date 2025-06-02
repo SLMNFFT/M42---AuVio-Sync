@@ -2,7 +2,7 @@ streamlit==1.38.0
 numpy>=1.26.4
 opencv-python==4.9.0.80
 librosa==0.10.1
-# tensorflow>=2.16.1  # Uncomment if you need TF
+tensorflow>=2.16.1  # Uncomment if you need TF
 rich==14.0.0
 ffmpeg-python==0.2.0
 
