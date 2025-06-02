@@ -6,14 +6,15 @@ import cv2
 import os
 import tempfile
 import subprocess
-import tensorflow as tf  # For utilizing GPU resources (TensorFlow example)
+import sys  # Added for sys.exit
 
 st.set_page_config(layout="wide")
 
-# Ensure TensorFlow uses the GPU if available
-if tf.config.list_physical_devices('GPU'):
+# GPU Detection (TensorFlow-free version)
+try:
+    subprocess.check_output("nvidia-smi")
     st.write("🚀 GPU is available!")
-else:
+except (FileNotFoundError, subprocess.CalledProcessError):
     st.write("⚠️ No GPU detected. Running on CPU.")
 
 def convert_audio_to_wav(input_path, output_path):
@@ -234,4 +235,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
